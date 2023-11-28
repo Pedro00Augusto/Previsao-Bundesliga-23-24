@@ -86,8 +86,8 @@ def calculo_pontos(linha):
     time_casa = linha["Casa"]
     time_fora = linha["Fora"]
     
-    lambda_casa = (estatisticas.loc[estatisticas['Time']==time_casa, "gols_feitos_casa"].iloc[0]*estatisticas.loc[estatisticas['Time']==time_fora, "gols_sofridos_fora"].iloc[0]) + erroMandante 
-    lambda_fora = (estatisticas.loc[estatisticas['Time']==time_fora, "gols_feitos_fora"].iloc[0]*estatisticas.loc[estatisticas['Time']==time_casa, "gols_sofridos_casa"].iloc[0]) + erroVisitante
+    lambda_casa = ((estatisticas.loc[estatisticas['Time']==time_casa, "gols_feitos_casa"].iloc[0])+ erroMandante)*((estatisticas.loc[estatisticas['Time']==time_fora, "gols_sofridos_fora"].iloc[0]) + erroMandante) 
+    lambda_fora = ((estatisticas.loc[estatisticas['Time']==time_fora, "gols_feitos_fora"].iloc[0])+ erroVisitante)*((estatisticas.loc[estatisticas['Time']==time_casa, "gols_sofridos_casa"].iloc[0]) + erroVisitante)
     
     
     pv_casa = 0
