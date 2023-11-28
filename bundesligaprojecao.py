@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-#Comando Console Spyder python -m spyder_kernels.console
 import pandas as pd
 import requests
 from scipy.stats import poisson
@@ -138,7 +137,7 @@ classificacao_atualizada = classificacao_atualizada.reset_index(drop=True)
 classificacao_atualizada.index = classificacao_atualizada.index + 1    
     
     
-#Calculo da probabilidade de um resultado     
+#Calculo da probabilidade de um resultado, parte extra a projeção da tabela original, apenas por diversão!    
 
 # homeTeam = "Borussia Mönchengladbach"
 # awayTeam = "Borussia Dortmund"
